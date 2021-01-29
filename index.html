@@ -1,1 +1,116 @@
-<<h1>This is a survey.</h1>
+<html>
+    <head>
+      <style>
+        body{
+          background: repeating-linear-gradient(
+                      135deg,
+                      slateblue 0px,
+                      slateblue 200px,
+                      Orchid  200px,
+                      Orchid  400px);
+        }
+
+        #survey-container{
+          border-radius: 20px;
+          width: 70%;
+          margin: 50 auto;
+          background: white;
+          padding: 10px;
+        }
+
+        header{
+          text-align: center;
+          padding: 20px;
+        }
+
+        label{
+          font-size: 18px;
+          font-style: bold;
+          display: block;
+          padding-bottom: 10px;
+        }
+
+        textarea, select, #name, #email, #number{
+          text-align: left;
+          display: block;
+          width: 100%;
+          padding: 10px;
+        }
+
+        #rate-radios, #reasons-checkbox{
+          margin-bottom: 5px;
+        }
+
+        #submit{
+          text-align: center;
+          margin-left:25%;
+          width: 50%;
+          background-color: AliceBlue;
+          border: 0px;
+          font-size: 18px;
+          padding: 10px 0 10px 0;
+        }
+
+        #submit:hover{
+          background-color: Lavender;
+        }
+      </style>
+    </head>
+
+    <body>
+      <div id="survey-container">
+         <header>
+             <h1 id="title">Remote Life Survey</h1>
+             <p id="description">This is a survey that you can tell us how you fell about your remote life.</p>
+         </header>
+
+         <main>
+             <form id="survey-form">
+               <label id="name-label">Name:</label>
+               <input type="text" name="name" id="name" required placeholder="Your Name"><br>
+
+               <label id="email-label">Email:</label>
+               <input type="email" name="email" id="email" required placeholder="Best Email"><br>
+
+               <label id="number-label">How long have you been remote?</label>
+               <input id="number" type="number" name="number" min="1" max="120" required placeholder="Number of monthes"><br>
+
+               <label id="current-role-label">Which option best describes your current role?</label>
+                    <select id="dropdown" required>
+                      <option value="" selected disabled hidden>Choose here</option>
+                      <option value="student">Student</option>
+                      <option value="full-time-job">Full Time Job</option>
+                      <option value="full-time-learner">Full Time Learner</option>
+                      <option value="prefer-not-to-say">Prefer not to say</option>
+                      <option value="other">Other</option>
+                    </select><br>
+
+               <div id="rate-radios">
+               <label id="rate-label">Do you enjoy working remotely so far?</label>
+                      <input id="no" type="radio" name="rate" align="left">No, not really.<br>
+                      <input id="somewhat" type="radio" name="rate" align="left">Yes, somewhat.<br>
+                      <input id="yes" type="radio" name="rate" align="left">Yes, very much.<br>
+               </div>
+
+               <div id="reasons-checkbox">
+               <label id="favorite-part-label">Reasons you enjoy remote life?</label>
+                    <input type="checkbox" name="favorite-part" value="better-work-life-balance">Better Work-Life Balance<br>
+                    <input type="checkbox" name="favorite-part" value="less-commut-stress">Less Commute Stress<br>
+                    <input type="checkbox" name="favorite-part" value="location-independence">Location Independence<br>
+                    <input type="checkbox" name="favorite-part" value="improved-inclusivity">Improved Inclusivity<br>
+                    <input type="checkbox" name="favorite-part" value="money-savings">Money Savings<br>
+                    <input type="checkbox" name="favorite-part" value="others">Others<br>
+               </div>
+               <label id="comments-label">Any comments you would like to add?</label>
+               <textarea id="comments" placeholder="Additional Comments"></textarea><br>
+
+               <input type="submit" id="submit">
+
+          </form>
+        </main>
+        <div>
+      <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+      </script>
+    </body>
+
+</html>
